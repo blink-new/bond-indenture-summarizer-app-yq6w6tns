@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 221 83% 53%; /* #1e40af */
+  --accent: 213 94% 68%; /* #3b82f6 */
+  --background: 210 40% 98%; /* #f8fafc */
+  --dark-mode: 222 84% 5%; /* #0f172a */
+  --card: 0 0% 100%;
+  --card-foreground: 222 84% 5%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 84% 5%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 221 83% 53%;
+  --radius: 0.5rem;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222 84% 5%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  font-family: Inter, sans-serif;
+  background-color: hsl(var(--background));
+  color: hsl(var(--card-foreground));
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 50%;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
